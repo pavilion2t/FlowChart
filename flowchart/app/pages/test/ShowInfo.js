@@ -16,7 +16,7 @@ class ShowInfo extends Component {
           padding: 10,
           zIndex:1200
         }}>
-        <p>Check this info</p>
+        <p>点击显示详细信息</p>
       </div>
     )
   }

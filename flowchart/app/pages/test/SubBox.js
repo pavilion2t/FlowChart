@@ -47,7 +47,8 @@ class SubBox extends Component{
             <div onDoubleClick={()=>{alert("点击我")}}
                 onMouseOut={(e)=>{this.setState({show:false});e.stopPropagation()}}
                 onMouseMove={(e)=>{this.setState({show:true});e.stopPropagation()}} ref="target">
-                <img src={require("./images/end.png")} style={{width:50,height:50}}/>
+                {/*放下的时候显示的图片*/}
+                <img src={require("./images/recycle.png")} style={{width:50,height:50}}/>
                 <p style={{marginTop:5}}>{this.props.name}</p>
             </div>
             <Overlay

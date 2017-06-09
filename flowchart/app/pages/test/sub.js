@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button } from 'antd'
 import Third from './Third'
 import Dustbin from './Dustbin';
+import MenuTree from "./MenuTree";
 
 import { DragDropContextProvider } from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
@@ -33,8 +34,8 @@ export default class sub extends Component {
       <DragDropContextProvider backend={HTML5Backend}>
         <div  className="page">
           <h1>拖动图标开始画流程图</h1>
-          <Third />
-          <Dustbin />
+          <MenuTree/>
+          <Dustbin/>
         </div>
       </DragDropContextProvider>
     )
