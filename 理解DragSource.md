@@ -47,9 +47,9 @@ var MyComponent = createReactClass({
 
   ## Parameters
 
-  * **type类型:** Required.必须的。  
+  * **type:** Required.  
   Either a string, an ES6 symbol, or a function that returns either given the component's props. Only the drop targets registered for the same type will react to the items produced by this drag source. Read the overview to learn more about the items and types.    
-  可以是字符串，symbol数据类型，或者是一个函数返回组件的属性。只有相同类型注册的拖放目标会对拖放源产生的项目作出反应。了解项目和类型的更多信息查阅概览。
+  类型，必须的。可以是字符串，symbol数据类型，或者是一个函数返回组件的属性。只有相同类型注册的拖放目标会对拖放源产生的项目作出反应。了解项目和类型的更多信息查阅概览。
 
   * **spec:** Required. A plain JavaScript object with a few allowed methods on it. It describes how the drag source reacts to the drag and drop events. See the drag source specification described in detail in the next section.  
   详细信息：必须的。这是一个包含一些方法的JS对象。它描述拖放源如何对拖放事件作出反应。拖放源的详细描述参考下一节。
