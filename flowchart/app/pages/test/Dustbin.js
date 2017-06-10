@@ -6,6 +6,7 @@ import MyCanvas from './MyCanvas';
 const boxTarget = {
   drop(props,monitor) {
     var ClientOffset=monitor.getClientOffset();
+     {/*放置的图片的坐标：X屏幕的宽度减去左边侧边栏宽度，间距，边距*/}
     ClientOffset.x=ClientOffset.x-230-15-30;
     ClientOffset.y=ClientOffset.y-70-35-15-30;
     var item=monitor.getItem();
