@@ -80,11 +80,11 @@ The second spec parameter must be a plain object implementing the drag source sp
 
   ## Specification Method Parameters 
 
-  * **props:** Your component's current props.
+  * **props:** Your component's current props.组件现在的属性。
 
-  * **monitor:** An instance of DragSourceMonitor. Use it to query the information about the current drag state, such as the currently dragged item and its type, the current and initial coordinates and offsets, and whether it was dropped yet. Read the DragSourceMonitor documentation for a complete list of monitor methods, or read the overview for an introduction to the monitors.
+  * **monitor:** An instance of DragSourceMonitor. Use it to query the information about the current drag state, such as the currently dragged item and its type, the current and initial coordinates and offsets, and whether it was dropped yet. Read the DragSourceMonitor documentation for a complete list of monitor methods, or read the overview for an introduction to the monitors.拖放源监视器的实例。用它来查询当前拖动状态信息,如当前拖放项目及其类型、当前和初始坐标偏移量,是否下降。阅读拖放源监视器文档监控方法的完整列表,或阅读概述介绍了显示器。
 
-  * **component:** When specified, it is the instance of your component. Use it to access the underlying DOM node for position or size measurements, or to call setState, and other component methods. It is purposefully missing from isDragging and canDrag because the instance may not be available by the time they are called. If you want these methods to depend on the component's state, consider lifting the state to the parent component, so that you can just use props. Generally your code will be cleaner if you rely on props instead whenever possible.
+  * **component:** When specified, it is the instance of your component. Use it to access the underlying DOM node for position or size measurements, or to call setState, and other component methods. It is purposefully missing from isDragging and canDrag because the instance may not be available by the time they are called. If you want these methods to depend on the component's state, consider lifting the state to the parent component, so that you can just use props. Generally your code will be cleaner if you rely on props instead whenever possible.当被指定时,他是你组件的实例。用它来访问底层的DOM节点位置或尺寸测量,或调用setState状态和其他组件方法。在isDragging and canDrag故意失踪是因为，在调用的时候实例可能不可用。如果你想让这些方法依赖于组件的状态,考虑提升状态到父组件,这样你可以使用props属性。
   
   
   
