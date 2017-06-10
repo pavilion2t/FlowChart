@@ -1,7 +1,5 @@
 import React, { Component,propTypes} from 'react';
 import ReactDOM from 'react-dom';
-import {Overlay} from "react-bootstrap"
-import ShowInfo from "./ShowInfo"
 import { DragSource } from 'react-dnd';
 
 const boxSource = {
@@ -44,23 +42,19 @@ class SubBox extends Component{
     return (
         connectDragSource(
           <div>
-            <div onDoubleClick={()=>{alert("点击我")}}
+            {/*阻止事件冒泡*/}
+            <div
                 onMouseOut={(e)=>{this.setState({show:false});e.stopPropagation()}}
-                onMouseMove={(e)=>{this.setState({show:true});e.stopPropagation()}} ref="target">
+                onMouseMove={(e)=>{this.setState({show:true});e.stopPropagation()}}
+                ref="target">
                 {/*放下的时候显示的图片*/}
-                <img src={require("./images/recycle.png")} style={{width:50,height:50}}/>
-                <p style={{marginTop:5}}>{this.props.name}</p>
+                <img
+                src={require("./images/recycle.png")}
+                style={{width:50,height:50}}/>
+                <p style={{marginTop:2}}>
+                {this.props.name}
+                </p>
             </div>
-            <Overlay
-              show={this.state.show}
-              animation={false}
-              onHide={() => this.setState({ show: false })}
-              placement="right"
-              container={this}
-              target={() => ReactDOM.findDOMNode(this.refs.target)}>
-              <ShowInfo/>
-            </Overlay>
-
           </div>
         )
       );
