@@ -111,9 +111,16 @@ If you're new to these concepts, the overview should give you a good idea about 
 
   ## Parameters 
 
-  * **connect:** An instance of DragSourceConnector. It has two methods: dragPreview() and dragSource(). Of them, dragSource() is the one you'll use the most. It returns a function you need to pass down to your component to connect the source DOM node to the React DnD backend. If you return something like { connectDragSource: connect.dragSource() } from your collect function, the component will receive connectDragSource as a prop so you can mark the relevant node inside its render() as draggable: return this.props.connectDragSource(<div>...</div>). You can see this pattern in action in the example at the end of this file. Read the DragSourceConnector documentation for a complete list of connect methods, or read the overview for an introduction to the connectors.
+  * **connect:** An instance of DragSourceConnector. It has two methods: dragPreview() and dragSource().   
+  Of them, dragSource() is the one you'll use the most.     
+  It returns a function you need to pass down to your component to connect the source DOM node to the React DnD backend.    
+  If you return something like { connectDragSource: connect.dragSource() } from your collect function, the component will receive connectDragSource as a prop so you can mark the relevant node inside its render() as draggable: return this.props.connectDragSource(<div>...</div>).     
+  You can see this pattern in action in the example at the end of this file.     
+  Read the DragSourceConnector documentation for a complete list of connect methods, or read the overview for an introduction to the connectors.
 
-  * **monitor:** An instance of DragSourceMonitor. It is precisely the same monitor you receive in the drag source specification methods, and you can use it to query the information about the current drag state. Read the DragSourceMonitor documentation for a complete list of monitor methods, or read the overview for an introduction to the monitors.
+  * **monitor:** An instance of DragSourceMonitor.     
+  It is precisely the same monitor you receive in the drag source specification methods, and you can use it to query the information about the current drag state.     
+  Read the DragSourceMonitor documentation for a complete list of monitor methods, or read the overview for an introduction to the monitors.
 
 
 
@@ -134,7 +141,11 @@ For easier testing, it provides an API to reach into the internals:
 
   ## Nesting Behavior 
 
-If a drag source is nested in another drag source, the innermost drag source of the compatible type wins. Drag sources that return false from canDrag are skipped. The chosen drag source is the only one that will receive beginDrag and, subsequently, endDrag. There is no propagation once the drag source is determined.
+If a drag source is nested in another drag source, the innermost drag source of the compatible type wins.   
+如果一个拖放源嵌套另一个拖放源,最内层的拖放源兼容获胜。
+Drag sources that return false from canDrag are skipped.     
+The chosen drag source is the only one that will receive beginDrag and, subsequently, endDrag.     
+There is no propagation once the drag source is determined.
 
 
   ## Example
