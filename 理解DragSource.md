@@ -91,17 +91,22 @@ The second spec parameter must be a plain object implementing the drag source sp
   
   ## The Collecting Function 
 
-Just specifying the drag source type and spec is not quite enough.
-There's still a few more things we need to take care of:
+Just specifying the drag source type and spec is not quite enough.    
+只了解拖放源类型和规范肯定不够。
+There's still a few more things we need to take care of:    
+仍然有一些事情我们需要了解
 
   * connect the React DnD event handlers to some node in the component;
   * pass some knowledge about the dragging state to our component.  
   
-All communication between the React components happens via props, so it makes sense that React DnD injects special props into your component. However it gives you the freedom to name them and decide what props your component will receive.
+All communication between the React components happens via props, so it makes sense that React DnD injects special props into your component. However it gives you the freedom to name them and decide what props your component will receive.     
+React组件间的所有通信都是通过属性发生的，所以React DnD将一些特殊属性注入到你的组件中就说的通了，它给你的命名的自由,决定组件将接收什么属性。
 
-Your collecting function will be called by React DnD with a connector that lets you connect nodes to the DnD backend, and a monitor to query information about the drag state. It should return a plain object of props to inject into your component.
+Your collecting function will be called by React DnD with a connector that lets you connect nodes to the DnD backend, and a monitor to query information about the drag state. It should return a plain object of props to inject into your component.     
+你的收藏方法会被React DnD 调用。连接器允许您将节点连接到DnD的后端，监视器查询信息拖动状态。它应该返回一个属性对象来注入到你的组件。
 
-If you're new to these concepts, the overview should give you a good idea about them.  
+If you're new to these concepts, the overview should give you a good idea about them.    
+如果你刚了解这些概念,概述应该读读。
 
 
   ## Parameters 
