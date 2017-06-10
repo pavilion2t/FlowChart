@@ -4,7 +4,7 @@ Wrap your component with DragSource to make it draggable. DragSource is a higher
 
 To use DragSource, don't forget to wrap the top-level component of your app in a DragDropContext.要使用拖放源，别忘了把最高级的组件包裹在DragDropContext里面。
 
-  ## Signature
+  ## Signature  
 
 DragSource uses partial application.拖放源使用部分应用程序？？？  
 
@@ -47,8 +47,7 @@ var MyComponent = createReactClass({
 
   ## Parameters
 
-  * **type:** Required.  
-  Either a string, an ES6 symbol, or a function that returns either given the component's props. Only the drop targets registered for the same type will react to the items produced by this drag source. Read the overview to learn more about the items and types.    
+  * **type:** Required. Either a string, an ES6 symbol, or a function that returns either given the component's props. Only the drop targets registered for the same type will react to the items produced by this drag source. Read the overview to learn more about the items and types.    
   类型，必须的。可以是字符串，symbol数据类型，或者是一个函数返回组件的属性。只有相同类型注册的拖放目标会对拖放源产生的项目作出反应。了解项目和类型的更多信息查阅概览。
 
   * **spec:** Required. A plain JavaScript object with a few allowed methods on it. It describes how the drag source reacts to the drag and drop events. See the drag source specification described in detail in the next section.  
