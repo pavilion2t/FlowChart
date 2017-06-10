@@ -1,15 +1,18 @@
-  # DragSource 
+  # DragSource拖放源
 
-Wrap your component with DragSource to make it draggable. DragSource is a higher-order component accepting three required parameters. They are described in detail below.
+Wrap your component with DragSource to make it draggable. DragSource is a higher-order component accepting three required parameters. They are described in detail below.把你的组件包裹在拖放源中，以使其可拖放。拖放源是一个更高层级的组件，接收三个必须的参数，以下详细阐述。
 
-To use DragSource, don't forget to wrap the top-level component of your app in a DragDropContext.
+To use DragSource, don't forget to wrap the top-level component of your app in a DragDropContext.要使用拖放源，别忘了把最高级的组件包裹在DragDropContext里面。
 
-  ## Signature 
+  ## Signature署名 
 
-DragSource uses partial application.
-After specifying its parameters with the first call, you need to pass your React component class as the only parameter in the second call.
-This signature makes DragSource usable as an ES7 decorator. 
-Read the overview for a more detailed explanation of the decorators and the higher-order components.
+DragSource uses partial application.拖放源使用部分应用程序？？？  
+
+After specifying its parameters with the first call, you need to pass your React component class as the only parameter in the second call.第一次调用要详细说明参数信息，然后在第二次调用时你需要传递React组件Class作为唯一参数。   
+
+This signature makes DragSource usable as an ES7 decorator. 这个署名让拖放源变成一个ES7装饰器，并且可以使用。   
+
+Read the overview for a more detailed explanation of the decorators and the higher-order components.通过阅读概览可以更详细了解装饰器和高层级组件。
 
 ```
 //ES7
@@ -17,7 +20,7 @@ import { DragSource } from 'react-dnd';
 
 @DragSource(type, spec, collect)
 export default class MyComponent {
-  /* ... */
+
 }
 ```
 
@@ -26,7 +29,7 @@ export default class MyComponent {
 import { DragSource } from 'react-dnd';
 
 class MyComponent {
-  /* ... */
+
 }
 
 export default DragSource(type, spec, collect)(MyComponent);
@@ -38,13 +41,14 @@ var createReactClass = require('create-react-class');
 var DragSource = require('react-dnd').DragSource;
 
 var MyComponent = createReactClass({
-  /* ... */
+
 });
 ```
 
-  ## Parameters 
+  ## Parameters参数 
 
-  * **type:** Required. Either a string, an ES6 symbol, or a function that returns either given the component's props. Only the drop targets registered for the same type will react to the items produced by this drag source. Read the overview to learn more about the items and types.
+  * **type类型:** Required.必须的。  
+  Either a string, an ES6 symbol, or a function that returns either given the component's props. Only the drop targets registered for the same type will react to the items produced by this drag source. Read the overview to learn more about the items and types.
 
   * **spec:** Required. A plain JavaScript object with a few allowed methods on it. It describes how the drag source reacts to the drag and drop events. See the drag source specification described in detail in the next section.
 
