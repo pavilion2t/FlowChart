@@ -28,25 +28,16 @@ class SubBox extends Component{
       show:false
     };
   }
-  componentDidMount () {
-
-  }
-
 
   render() {
-
     let { isDragging, connectDragSource, } = this.props;
      if (isDragging) {
       return null;
     }
     return (
         connectDragSource(
-          <div>
-            {/*阻止事件冒泡*/}
-            <div
-                onMouseOut={(e)=>{this.setState({show:false});e.stopPropagation()}}
-                onMouseMove={(e)=>{this.setState({show:true});e.stopPropagation()}}
-                ref="target">
+
+            <div>
                 {/*放下的时候显示的图片*/}
                 <img
                 src={require("./images/recycle.png")}
@@ -55,7 +46,6 @@ class SubBox extends Component{
                 {this.props.name}
                 </p>
             </div>
-          </div>
         )
       );
   }

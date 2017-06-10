@@ -2,7 +2,7 @@ import React, { PropTypes, Component } from 'react';
 import { DropTarget } from 'react-dnd';
 import SubBox from './SubBox';
 import MyCanvas from './MyCanvas';
-const DATA=[];
+
 const boxTarget = {
   drop(props,monitor) {
     var ClientOffset=monitor.getClientOffset();

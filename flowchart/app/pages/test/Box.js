@@ -1,13 +1,6 @@
 import React, { Component} from 'react';
 import { DragSource } from 'react-dnd';
 
-//这里表示拖放源的样式
-const styles = {
-  backgroundColor: 'white',
-  cursor: 'move',
-  color:"#666"
-};
-
 //拖放源的内容，名字显示
 const boxSource = {
   beginDrag(props) {
@@ -15,7 +8,6 @@ const boxSource = {
       name: props.name,
     };
   },
-
   endDrag(props, monitor) {
     const item = monitor.getItem();
     const dropResult = monitor.getDropResult();
@@ -30,13 +22,12 @@ function collect(connect, monitor) {
   };
 }
 
-
 class Box extends Component{
   componentDidMount () {
       const img = new Image();
       img.onload = () => this.props.connectDragPreview(img);
       /* 拖动时候显示的图片 */
-      img.src = require("./images/recycle.png")
+      img.src = require("./images/end.png")
   }
 
   render() {
@@ -46,7 +37,9 @@ class Box extends Component{
 
     return (
       connectDragSource(
-        <p style={styles}>{this.props.name}</p>,
+        <p style={{backgroundColor: 'pink',color:'#666'}}>
+         {this.props.name}
+        </p>,
       )
     );
   }
