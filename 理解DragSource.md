@@ -1,10 +1,10 @@
-  # DragSource拖放源
+  # DragSource 拖放源
 
 Wrap your component with DragSource to make it draggable. DragSource is a higher-order component accepting three required parameters. They are described in detail below.把你的组件包裹在拖放源中，以使其可拖放。拖放源是一个更高层级的组件，接收三个必须的参数，以下详细阐述。
 
 To use DragSource, don't forget to wrap the top-level component of your app in a DragDropContext.要使用拖放源，别忘了把最高级的组件包裹在DragDropContext里面。
 
-  ## Signature署名 
+  ## Signature 署名 
 
 DragSource uses partial application.拖放源使用部分应用程序？？？  
 
@@ -48,13 +48,17 @@ var MyComponent = createReactClass({
   ## Parameters参数 
 
   * **type类型:** Required.必须的。  
-  Either a string, an ES6 symbol, or a function that returns either given the component's props. Only the drop targets registered for the same type will react to the items produced by this drag source. Read the overview to learn more about the items and types.
+  Either a string, an ES6 symbol, or a function that returns either given the component's props. Only the drop targets registered for the same type will react to the items produced by this drag source. Read the overview to learn more about the items and types.    
+  可以是字符串，symbol数据类型，或者是一个函数返回组件的属性。只有相同类型注册的拖放目标会对拖放源产生的项目作出反应。了解项目和类型的更多信息查阅概览。
 
-  * **spec:** Required. A plain JavaScript object with a few allowed methods on it. It describes how the drag source reacts to the drag and drop events. See the drag source specification described in detail in the next section.
+  * **spec:** Required. A plain JavaScript object with a few allowed methods on it. It describes how the drag source reacts to the drag and drop events. See the drag source specification described in detail in the next section.  
+  详细信息：必须的。这是一个包含一些方法的JS对象。它描述拖放源如何对拖放事件作出反应。拖放源的详细描述参考下一节。
 
-  * **collect:** Required. The collecting function. It should return a plain object of the props to inject into your component. It receives two parameters: connect and monitor. Read the overview for an introduction to the monitors, the connectors, and the collecting function. See the collecting function described in detail after the next section.
+  * **collect:** Required. The collecting function. It should return a plain object of the props to inject into your component. It receives two parameters: connect and monitor. Read the overview for an introduction to the monitors, the connectors, and the collecting function. See the collecting function described in detail after the next section.    
+  收藏函数：必须的。收藏函数应该返回一个属性对象来注入到你的组件中。它接收两个参数：连接和监视。阅读概览了解更多它们的信息。下一节有关于收藏函数更详细的描述。
 
-  * **options:** Optional. A plain object. If some of the props to your component are not scalar (that is, are not primitive values or functions), specifying a custom arePropsEqual(props, otherProps) function inside the options object can improve the performance. Unless you have performance problems, don't worry about it.
+  * **options:** Optional. A plain object. If some of the props to your component are not scalar (that is, are not primitive values or functions), specifying a custom arePropsEqual(props, otherProps) function inside the options object can improve the performance. Unless you have performance problems, don't worry about it.     
+  选择：可选的。一个简单的对象。如果去你的组件的一些属性是不分等级的（就是说，不是原始值或者是函数），在options对象里指定一个定制的arePropsEqual函数可以改善性能。除非你有性能问题，否则不用担心它。
   
   
   ## Drag Source Specification 
