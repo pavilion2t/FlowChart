@@ -76,6 +76,7 @@
     "open-browser-webpack-plugin": "~0.0.2",
     "rc-queue-anim": "^0.12.6",
     "rc-tween-one": "~0.8.5",
+    "react": "~15.3.2",
     "react-bootstrap": "^0.31.0",
     "react-copy-to-clipboard": "~4.2.3",
     "react-dnd": "^2.4.0",
