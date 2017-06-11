@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import ReactDom from 'react-dom'
 import { connect } from 'react-redux'
 import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button } from 'antd'
-import Third from './Third'
 import Dustbin from './Dustbin';
 import MenuTree from "./MenuTree";
 
@@ -17,25 +16,23 @@ import HTML5Backend from 'react-dnd-html5-backend';
 export default class sub extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-
-    }
   }
-
-  componentDidMount() {
-
-  }
-
-
-
 
   render() {
     return (
       <DragDropContextProvider backend={HTML5Backend}>
-        <div  className="page">
-          <h1>拖动图标开始画流程图</h1>
-          <MenuTree/>
-          <Dustbin/>
+        <div>
+          <Row>
+            <Col span={16}> <h1>拖动图标开始画流程图</h1> <Dustbin/></Col>
+
+            <Col span={4}>
+              <img src={require("./images/recycle.png")} style={{width:50,height:50}}/>
+              <img src={require("./images/recycle.png")} style={{width:50,height:50}}/>
+              <img src={require("./images/recycle.png")} style={{width:50,height:50}}/>
+            </Col>
+
+            <Col span={4}><MenuTree/></Col>
+          </Row>
         </div>
       </DragDropContextProvider>
     )
