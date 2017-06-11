@@ -29,33 +29,26 @@ export default class MenuTree extends Component {
 
 	mapTree(){
 		var tempArr=this.state.tree;
-
-			tempArr=tempArr.map((value,index)=>{
-
-					var sub_nav=value.nodes.map((v,i)=>{
-						return(<li key={i}>
-							<Box name={v.name} imguri={v.imguri}/>
-							</li>)
-					})
-					//这里显示
-					return(<span key={index}><span>{sub_nav}</span></span>)
-			    });
-			return tempArr
-
+		tempArr=tempArr.map((value,index)=>{
+		  var sub_nav=value.nodes.map((v,i)=>{
+		    return(<li key={i}>
+		             <Box name={v.name} imguri={v.imguri}/>
+			   </li>)
+			  })
+		//这里显示
+		   return(<span key={index}><span>{sub_nav}</span></span>)
+			 });
+		  return tempArr
 	}
 
-	//这是拖放源，任务调度中心／业务系统／自动化编译部署／新增用户／向导
+	//这是拖放源
 	render(){
-		var treeList=this.mapTree();
-		return(
-			<div>
-          <ul>
+	var treeList=this.mapTree();
+	  return(<div>
+           <ul>
             {treeList}
-
-          </ul>
-			</div>
-		)
-	}
-
-
+           </ul>
+	  </div>
+	)
+   }
 }
