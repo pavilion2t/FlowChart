@@ -52,7 +52,7 @@ class Dustbin extends Component {
                      top:value.offset.y+30,
                      left:value.offset.x+30,
                      cursor:'pointer'}}>
-                 <SubBox name={value.item.name}/>
+                 <SubBox name={value.item.name} imguri={value.item.imguri}/>
                </div>
       })
       return ds
