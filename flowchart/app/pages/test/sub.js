@@ -19,22 +19,15 @@ export default class sub extends Component {
   }
 
   render() {
-    return (
-      <DragDropContextProvider backend={HTML5Backend}>
-        <div>
-          <Row>
-            <Col span={16}> <h1>拖动图标开始画流程图</h1> <Dustbin/></Col>
-
-            <Col span={4}>
-              <img src={require("./images/recycle.png")} style={{width:50,height:50}}/>
-              <img src={require("./images/recycle.png")} style={{width:50,height:50}}/>
-              <img src={require("./images/recycle.png")} style={{width:50,height:50}}/>
-            </Col>
-
-            <Col span={4}><MenuTree/></Col>
-          </Row>
-        </div>
-      </DragDropContextProvider>
-    )
-  }
-}
+     return (
+       <DragDropContextProvider backend={HTML5Backend}>
+         <div>
+           <Row>
+             <Col span={20}> <h1>拖动图标开始画流程图</h1> <Dustbin/></Col>
+             <Col span={4}><MenuTree/></Col>
+           </Row>
+         </div>
+       </DragDropContextProvider>
+     )
+   }
+ }
