@@ -39,9 +39,7 @@ class SubBox extends Component{
 
             <div>
                 {/*放下的时候显示的图片*/}
-                <img
-                src={require("./images/recycle.png")}
-                style={{width:50,height:50}}/>
+                <img src={require("./images/recycle.png")} style={{width:50,height:50}}/>
                 <p style={{marginTop:2}}>
                 {this.props.name}
                 </p>
